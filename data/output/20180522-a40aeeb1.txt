@@ -1,0 +1,73 @@
+05/22/2018 05:18:01 PM: [ COMMAND: train.py --mode=train --embedding-file=glove.6B.50d.txt --kb_n=100 --network=mem-attn ]
+05/22/2018 05:18:01 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:18:01 PM: [ Load data files ]
+05/22/2018 05:18:01 PM: [ Num train examples = 1000 ]
+05/22/2018 05:18:01 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:18:01 PM: [ Training model from scratch... ]
+05/22/2018 05:18:01 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:18:01 PM: [ Generate features ]
+05/22/2018 05:18:01 PM: [ Num features = 24 ]
+05/22/2018 05:18:01 PM: [ {'pos=O': 0, 'pos=V': 1, 'pos=D': 2, 'pos=N': 3, 'pos=R': 4, 'pos=#': 5, 'pos=&': 6, 'pos=P': 7, 'pos=,': 8, 'pos=$': 9, 'pos=@': 10, 'pos=^': 11, 'pos=U': 12, 'pos=X': 13, 'pos=A': 14, 'pos=L': 15, 'pos=T': 16, 'pos=!': 17, 'pos=G': 18, 'pos=E': 19, 'pos=~': 20, 'pos=S': 21, 'pos=Z': 22, 'pos=Y': 23} ]
+05/22/2018 05:18:01 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:18:01 PM: [ Build dictionary ]
+05/22/2018 05:18:01 PM: [ Restricting to words in ../data/embed/glove.6B.50d.txt ]
+05/22/2018 05:18:03 PM: [ Num words in set = 400000 ]
+05/22/2018 05:18:03 PM: [ Num words = 2146 ]
+05/22/2018 05:18:03 PM: [ Loading pre-trained embeddings for 2144 words from ../data/embed/glove.6B.50d.txt ]
+05/22/2018 05:18:05 PM: [ Loaded 2144 embeddings (100.00%) ]
+05/22/2018 05:18:05 PM: [ used 100 kb entries ]
+05/22/2018 05:18:05 PM: [ Converted kb entries to tensor ]
+05/22/2018 05:18:05 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:18:05 PM: [ Make data loaders ]
+05/22/2018 05:18:05 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:18:05 PM: [ CONFIG:
+{
+    "batch_size": 16,
+    "checkpoint": true,
+    "componentn": 4000,
+    "cuda": false,
+    "data_dir": "../data/working/train",
+    "data_workers": 2,
+    "display_iter": 10,
+    "dropout_emb": 0.4,
+    "dropout_rnn": 0.4,
+    "dropout_rnn_output": true,
+    "embed_dir": "../data/embed/",
+    "embedding_dim": 50,
+    "embedding_file": "../data/embed/glove.6B.50d.txt",
+    "expand_dictionary": false,
+    "fix_embeddings": false,
+    "gpu": -1,
+    "grad_clipping": 10,
+    "hidden_size": 128,
+    "kb_file": "../data/working/train/kb-sample.txt",
+    "kb_n": 100,
+    "layers": 1,
+    "learning_rate": 0.1,
+    "log_file": "../data/output/20180522-a40aeeb1.txt",
+    "max_len": 100,
+    "mode": "train",
+    "model_dir": "../data/output",
+    "model_file": "../data/output/20180522-a40aeeb1.mdl",
+    "model_name": "20180522-a40aeeb1",
+    "momentum": 0,
+    "network": "mem-attn",
+    "no_cuda": false,
+    "num_epochs": 10,
+    "optimizer": "adamax",
+    "parallel": false,
+    "pretrained": "",
+    "random_seed": 1111,
+    "restrict_vocab": true,
+    "rnn_padding": false,
+    "sort_by_len": false,
+    "test_batch_size": 16,
+    "train_file": "../data/working/train/q-sample.txt",
+    "train_ratio": 0.8,
+    "use_kb": true,
+    "use_pos": true,
+    "valid_metric": "negdis",
+    "weight_decay": 0
+} ]
+05/22/2018 05:18:05 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:18:05 PM: [ Starting training... ]

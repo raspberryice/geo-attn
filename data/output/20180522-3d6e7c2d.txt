@@ -1,0 +1,145 @@
+05/22/2018 05:20:51 PM: [ COMMAND: train.py --mode=train --embedding-file=glove.6B.50d.txt --kb_n=100 --network=mem-attn ]
+05/22/2018 05:20:51 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:20:51 PM: [ Load data files ]
+05/22/2018 05:20:51 PM: [ Num train examples = 1000 ]
+05/22/2018 05:20:51 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:20:51 PM: [ Training model from scratch... ]
+05/22/2018 05:20:51 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:20:51 PM: [ Generate features ]
+05/22/2018 05:20:51 PM: [ Num features = 24 ]
+05/22/2018 05:20:51 PM: [ {'pos=O': 0, 'pos=V': 1, 'pos=D': 2, 'pos=N': 3, 'pos=R': 4, 'pos=#': 5, 'pos=&': 6, 'pos=P': 7, 'pos=,': 8, 'pos=$': 9, 'pos=@': 10, 'pos=^': 11, 'pos=U': 12, 'pos=X': 13, 'pos=A': 14, 'pos=L': 15, 'pos=T': 16, 'pos=!': 17, 'pos=G': 18, 'pos=E': 19, 'pos=~': 20, 'pos=S': 21, 'pos=Z': 22, 'pos=Y': 23} ]
+05/22/2018 05:20:51 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:20:51 PM: [ Build dictionary ]
+05/22/2018 05:20:51 PM: [ Restricting to words in ../data/embed/glove.6B.50d.txt ]
+05/22/2018 05:20:53 PM: [ Num words in set = 400000 ]
+05/22/2018 05:20:53 PM: [ Num words = 2146 ]
+05/22/2018 05:20:53 PM: [ Loading pre-trained embeddings for 2144 words from ../data/embed/glove.6B.50d.txt ]
+05/22/2018 05:20:55 PM: [ Loaded 2144 embeddings (100.00%) ]
+05/22/2018 05:20:55 PM: [ used 100 kb entries ]
+05/22/2018 05:20:55 PM: [ Converted kb entries to tensor ]
+05/22/2018 05:20:55 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:20:55 PM: [ Make data loaders ]
+05/22/2018 05:20:55 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:20:55 PM: [ CONFIG:
+{
+    "batch_size": 16,
+    "checkpoint": true,
+    "componentn": 4000,
+    "cuda": false,
+    "data_dir": "../data/working/train",
+    "data_workers": 2,
+    "display_iter": 10,
+    "dropout_emb": 0.4,
+    "dropout_rnn": 0.4,
+    "dropout_rnn_output": true,
+    "embed_dir": "../data/embed/",
+    "embedding_dim": 50,
+    "embedding_file": "../data/embed/glove.6B.50d.txt",
+    "expand_dictionary": false,
+    "fix_embeddings": false,
+    "gpu": -1,
+    "grad_clipping": 10,
+    "hidden_size": 128,
+    "kb_file": "../data/working/train/kb-sample.txt",
+    "kb_n": 100,
+    "layers": 1,
+    "learning_rate": 0.1,
+    "log_file": "../data/output/20180522-3d6e7c2d.txt",
+    "max_len": 100,
+    "mode": "train",
+    "model_dir": "../data/output",
+    "model_file": "../data/output/20180522-3d6e7c2d.mdl",
+    "model_name": "20180522-3d6e7c2d",
+    "momentum": 0,
+    "network": "mem-attn",
+    "no_cuda": false,
+    "num_epochs": 10,
+    "optimizer": "adamax",
+    "parallel": false,
+    "pretrained": "",
+    "random_seed": 1111,
+    "restrict_vocab": true,
+    "rnn_padding": false,
+    "sort_by_len": false,
+    "test_batch_size": 16,
+    "train_file": "../data/working/train/q-sample.txt",
+    "train_ratio": 0.8,
+    "use_kb": true,
+    "use_pos": true,
+    "valid_metric": "negdis",
+    "weight_decay": 0
+} ]
+05/22/2018 05:20:55 PM: [ ---------------------------------------------------------------------------------------------------- ]
+05/22/2018 05:20:55 PM: [ Starting training... ]
+05/22/2018 05:20:55 PM: [ train: Epoch = 0 | iter = 0/50 | loss = -1.2357| elapsed time = 0.17 (s) ]
+05/22/2018 05:20:56 PM: [ train: Epoch = 0 | iter = 10/50 | loss = -1.4373| elapsed time = 1.10 (s) ]
+05/22/2018 05:20:57 PM: [ train: Epoch = 0 | iter = 20/50 | loss = -1.7985| elapsed time = 2.14 (s) ]
+05/22/2018 05:20:58 PM: [ train: Epoch = 0 | iter = 30/50 | loss = -1.9511| elapsed time = 3.14 (s) ]
+05/22/2018 05:20:59 PM: [ train: Epoch = 0 | iter = 40/50 | loss = -1.9116| elapsed time = 4.13 (s) ]
+05/22/2018 05:21:00 PM: [ train: Epoch 0 done. Time for epoch = 4.98 (s) ]
+05/22/2018 05:21:01 PM: [ validation done. Time for epoch = 0.49 (s)loss = -1.8711, acc@1 = 0.0150,acc@5= 0.0950 dis=9613.84 ]
+05/22/2018 05:21:01 PM: [ Best valid: negdis = -9613.8388 (epoch 0, 0 updates) ]
+05/22/2018 05:21:01 PM: [ train: Epoch = 1 | iter = 0/50 | loss = -1.9324| elapsed time = 5.65 (s) ]
+05/22/2018 05:21:02 PM: [ train: Epoch = 1 | iter = 10/50 | loss = -2.4307| elapsed time = 6.58 (s) ]
+05/22/2018 05:21:03 PM: [ train: Epoch = 1 | iter = 20/50 | loss = -2.0691| elapsed time = 7.54 (s) ]
+05/22/2018 05:21:04 PM: [ train: Epoch = 1 | iter = 30/50 | loss = -2.1327| elapsed time = 8.46 (s) ]
+05/22/2018 05:21:05 PM: [ train: Epoch = 1 | iter = 40/50 | loss = -2.2169| elapsed time = 9.51 (s) ]
+05/22/2018 05:21:05 PM: [ train: Epoch 1 done. Time for epoch = 4.89 (s) ]
+05/22/2018 05:21:06 PM: [ validation done. Time for epoch = 0.46 (s)loss = -1.9422, acc@1 = 0.0150,acc@5= 0.1000 dis=9747.11 ]
+05/22/2018 05:21:06 PM: [ train: Epoch = 2 | iter = 0/50 | loss = -2.0022| elapsed time = 11.00 (s) ]
+05/22/2018 05:21:07 PM: [ train: Epoch = 2 | iter = 10/50 | loss = -2.1768| elapsed time = 11.96 (s) ]
+05/22/2018 05:21:08 PM: [ train: Epoch = 2 | iter = 20/50 | loss = -2.1226| elapsed time = 12.92 (s) ]
+05/22/2018 05:21:09 PM: [ train: Epoch = 2 | iter = 30/50 | loss = -2.2202| elapsed time = 13.96 (s) ]
+05/22/2018 05:21:10 PM: [ train: Epoch = 2 | iter = 40/50 | loss = -2.2687| elapsed time = 14.91 (s) ]
+05/22/2018 05:21:11 PM: [ train: Epoch 2 done. Time for epoch = 4.92 (s) ]
+05/22/2018 05:21:11 PM: [ validation done. Time for epoch = 0.48 (s)loss = -1.9293, acc@1 = 0.0150,acc@5= 0.0950 dis=9613.84 ]
+05/22/2018 05:21:12 PM: [ train: Epoch = 3 | iter = 0/50 | loss = -2.4920| elapsed time = 16.43 (s) ]
+05/22/2018 05:21:13 PM: [ train: Epoch = 3 | iter = 10/50 | loss = -2.1986| elapsed time = 17.47 (s) ]
+05/22/2018 05:21:14 PM: [ train: Epoch = 3 | iter = 20/50 | loss = -2.4059| elapsed time = 18.50 (s) ]
+05/22/2018 05:21:15 PM: [ train: Epoch = 3 | iter = 30/50 | loss = -2.0924| elapsed time = 19.53 (s) ]
+05/22/2018 05:21:16 PM: [ train: Epoch = 3 | iter = 40/50 | loss = -2.0056| elapsed time = 20.60 (s) ]
+05/22/2018 05:21:17 PM: [ train: Epoch 3 done. Time for epoch = 5.16 (s) ]
+05/22/2018 05:21:17 PM: [ validation done. Time for epoch = 0.48 (s)loss = -1.9505, acc@1 = 0.0200,acc@5= 0.2350 dis=9264.98 ]
+05/22/2018 05:21:17 PM: [ Best valid: negdis = -9264.9756 (epoch 3, 0 updates) ]
+05/22/2018 05:21:17 PM: [ train: Epoch = 4 | iter = 0/50 | loss = -2.2592| elapsed time = 22.08 (s) ]
+05/22/2018 05:21:18 PM: [ train: Epoch = 4 | iter = 10/50 | loss = -2.2301| elapsed time = 23.03 (s) ]
+05/22/2018 05:21:19 PM: [ train: Epoch = 4 | iter = 20/50 | loss = -2.3084| elapsed time = 24.04 (s) ]
+05/22/2018 05:21:20 PM: [ train: Epoch = 4 | iter = 30/50 | loss = -2.0604| elapsed time = 24.96 (s) ]
+05/22/2018 05:21:21 PM: [ train: Epoch = 4 | iter = 40/50 | loss = -2.2612| elapsed time = 26.00 (s) ]
+05/22/2018 05:21:22 PM: [ train: Epoch 4 done. Time for epoch = 4.89 (s) ]
+05/22/2018 05:21:22 PM: [ validation done. Time for epoch = 0.48 (s)loss = -1.9779, acc@1 = 0.0150,acc@5= 0.0950 dis=9613.84 ]
+05/22/2018 05:21:23 PM: [ train: Epoch = 5 | iter = 0/50 | loss = -1.8411| elapsed time = 27.48 (s) ]
+05/22/2018 05:21:24 PM: [ train: Epoch = 5 | iter = 10/50 | loss = -2.2446| elapsed time = 28.51 (s) ]
+05/22/2018 05:21:25 PM: [ train: Epoch = 5 | iter = 20/50 | loss = -2.2696| elapsed time = 29.43 (s) ]
+05/22/2018 05:21:25 PM: [ train: Epoch = 5 | iter = 30/50 | loss = -2.2358| elapsed time = 30.34 (s) ]
+05/22/2018 05:21:27 PM: [ train: Epoch = 5 | iter = 40/50 | loss = -2.2492| elapsed time = 31.43 (s) ]
+05/22/2018 05:21:27 PM: [ train: Epoch 5 done. Time for epoch = 5.00 (s) ]
+05/22/2018 05:21:28 PM: [ validation done. Time for epoch = 0.47 (s)loss = -1.9434, acc@1 = 0.0250,acc@5= 0.2400 dis=9676.67 ]
+05/22/2018 05:21:28 PM: [ train: Epoch = 6 | iter = 0/50 | loss = -2.1541| elapsed time = 32.95 (s) ]
+05/22/2018 05:21:29 PM: [ train: Epoch = 6 | iter = 10/50 | loss = -2.2608| elapsed time = 33.97 (s) ]
+05/22/2018 05:21:30 PM: [ train: Epoch = 6 | iter = 20/50 | loss = -2.1912| elapsed time = 35.04 (s) ]
+05/22/2018 05:21:31 PM: [ train: Epoch = 6 | iter = 30/50 | loss = -2.1848| elapsed time = 36.07 (s) ]
+05/22/2018 05:21:32 PM: [ train: Epoch = 6 | iter = 40/50 | loss = -2.2171| elapsed time = 37.09 (s) ]
+05/22/2018 05:21:33 PM: [ train: Epoch 6 done. Time for epoch = 5.18 (s) ]
+05/22/2018 05:21:34 PM: [ validation done. Time for epoch = 0.47 (s)loss = -1.9974, acc@1 = 0.0150,acc@5= 0.0950 dis=9627.10 ]
+05/22/2018 05:21:34 PM: [ train: Epoch = 7 | iter = 0/50 | loss = -2.2270| elapsed time = 38.58 (s) ]
+05/22/2018 05:21:35 PM: [ train: Epoch = 7 | iter = 10/50 | loss = -2.4804| elapsed time = 39.61 (s) ]
+05/22/2018 05:21:36 PM: [ train: Epoch = 7 | iter = 20/50 | loss = -2.2035| elapsed time = 40.62 (s) ]
+05/22/2018 05:21:37 PM: [ train: Epoch = 7 | iter = 30/50 | loss = -2.2878| elapsed time = 41.55 (s) ]
+05/22/2018 05:21:38 PM: [ train: Epoch = 7 | iter = 40/50 | loss = -2.2748| elapsed time = 42.58 (s) ]
+05/22/2018 05:21:39 PM: [ train: Epoch 7 done. Time for epoch = 5.14 (s) ]
+05/22/2018 05:21:39 PM: [ validation done. Time for epoch = 0.49 (s)loss = -2.0096, acc@1 = 0.0200,acc@5= 0.1200 dis=9831.35 ]
+05/22/2018 05:21:39 PM: [ train: Epoch = 8 | iter = 0/50 | loss = -2.5368| elapsed time = 44.29 (s) ]
+05/22/2018 05:21:40 PM: [ train: Epoch = 8 | iter = 10/50 | loss = -2.2149| elapsed time = 45.30 (s) ]
+05/22/2018 05:21:41 PM: [ train: Epoch = 8 | iter = 20/50 | loss = -2.4110| elapsed time = 46.35 (s) ]
+05/22/2018 05:21:43 PM: [ train: Epoch = 8 | iter = 30/50 | loss = -2.2848| elapsed time = 47.45 (s) ]
+05/22/2018 05:21:44 PM: [ train: Epoch = 8 | iter = 40/50 | loss = -2.2139| elapsed time = 48.54 (s) ]
+05/22/2018 05:21:45 PM: [ train: Epoch 8 done. Time for epoch = 5.44 (s) ]
+05/22/2018 05:21:45 PM: [ validation done. Time for epoch = 0.45 (s)loss = -2.0126, acc@1 = 0.0200,acc@5= 0.1500 dis=9723.51 ]
+05/22/2018 05:21:45 PM: [ train: Epoch = 9 | iter = 0/50 | loss = -1.8062| elapsed time = 50.17 (s) ]
+05/22/2018 05:21:46 PM: [ train: Epoch = 9 | iter = 10/50 | loss = -2.2962| elapsed time = 51.26 (s) ]
+05/22/2018 05:21:47 PM: [ train: Epoch = 9 | iter = 20/50 | loss = -2.2990| elapsed time = 52.34 (s) ]
+05/22/2018 05:21:49 PM: [ train: Epoch = 9 | iter = 30/50 | loss = -2.3872| elapsed time = 53.60 (s) ]
+05/22/2018 05:21:50 PM: [ train: Epoch = 9 | iter = 40/50 | loss = -2.3529| elapsed time = 54.97 (s) ]
+05/22/2018 05:21:51 PM: [ train: Epoch 9 done. Time for epoch = 6.14 (s) ]
+05/22/2018 05:21:52 PM: [ validation done. Time for epoch = 0.48 (s)loss = -2.0349, acc@1 = 0.0200,acc@5= 0.1650 dis=9542.46 ]
