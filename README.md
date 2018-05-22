@@ -11,9 +11,7 @@ Apart from the packages listed in `requirements.txt`, please install `pytorch` a
 4. (Optional) Train glove embeddings on the training set of tweets. 
 We observed that word embeddings trained on our own dataset > random initialization > pretrained general word embeddings.
 ## Training
-1. Download the pretrained GloVe embeddings (200d twitter)
-2. Set the configurations in  `poiqa/config.py`(network settings) and `poiqa/train.py`(runtime settings and files).
-3. Run `train.py` Important options are `--mode` and `--network`.
+Run `train.py` Important options are `--mode` and `--network`.
 
 Mode can be selected between `train` and `test`. 
 If training, you can also provide a `train_ratio` to use part of the training as validation and use early stopping 
@@ -22,6 +20,7 @@ according to the performance on the validation set. When testing, the distance p
 You should provide the name of the model in `--network`. Available models include `mem-attn` (GeoAttn), `bow-mdn` (the MDN-Shared baseline),
 `attn-mdn` (GeoAttn without memory module), `mem` (GeoAttn without attention layer), `regression` (the AttnReg baseline).
 
+Additional configurations are in `poiqa/config.py`(network settings) and `poiqa/train.py`(runtime settings and files).
 ## Acknowledgements
 The code structure is altered from  `facebookresearch/DrQA`.
 
