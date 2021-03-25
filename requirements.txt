@@ -19,7 +19,7 @@ ptyprocess==0.5.2
 Pygments==2.2.0
 python-dateutil==2.6.1
 pytz==2017.2
-PyYAML==3.12
+PyYAML==5.4
 regex==2017.9.23
 requests==2.18.4
 scipy==0.19.1
