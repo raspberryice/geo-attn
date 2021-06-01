@@ -28,5 +28,5 @@ six==1.11.0
 smart-open==1.5.3
 torchvision==0.1.9
 traitlets==4.3.2
-urllib3==1.22
+urllib3==1.26.5
 wcwidth==0.1.7
