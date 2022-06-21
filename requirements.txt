@@ -7,7 +7,7 @@ Cython==0.26.1
 decorator==4.1.2
 idna==2.6
 jedi==0.10.2
-numpy==1.13.1
+numpy==1.22.0
 olefile==0.44
 pandas==0.20.3
 pexpect==4.2.1
